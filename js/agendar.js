@@ -91,7 +91,7 @@ function processaForm(){
         .then(function(docRef) { // Se gravou no Firebase
             msg = `
 <h3>Olá ${nome[0]}!</h3>
-<p>Seu serviço ${formServico} foi agendado com sucesso!</p>
+<p>Seu serviço ${formServico} foi agendado com sucesso para o dia ${formData} às ${formHorario}</p>
 <p>Obrigado por ultilizar os nossos serviços!</p>
 <h2>VOLTE SEMPRE!</h2>
             `;
