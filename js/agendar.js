@@ -57,17 +57,17 @@ function processaForm(){
         erro += '<li>Seu e-mail não é válido.</li>';
     }
 
-    // Validando assunto
+    // Validando servico
     if (formServico.length < 5) {
         erro += '<li>O serviço não foi preenchido.</li>';
     }
 
-    // Validando assunto
+    // Validando data
     if (formData.length < 5) {
         erro += '<li>O serviço não foi preenchido.</li>';
     }
     
-    // Validando mensagem
+    // Validando horario
     if (formHorario.length < 5) {
         erro += '<li>A mensagem está muito curta.</li>';
     }
@@ -78,7 +78,7 @@ function processaForm(){
         // Quebra nome do remetente pelos espaços
         nome = formNome.split(' ');
 
-        // Enviando para o Firebase, salvando na coleção 'contatos'
+        // Enviando para o Firebase, salvando na coleção 'agenda'
         db.collection("agenda").add({
             data: agoraDb(), // Obtém a data de agora, formatada
             nome: formNome,
